@@ -5,27 +5,16 @@
 |1000|異常錯誤|
 |1001|傳入資料異常|
 |1002|資料庫異常|
-|1003|登入令牌驗證失效|
-|1004|無此權限|
-|1005|建立失敗|
-|1101|帳號重複|
-|1102|無此帳號|
-|1103|密碼錯誤|
-|1104|查無此ID|
-|1105|查無指定聊天室|
-|1106|聊天室人數已滿|
 
-## UserRegister - 註冊
+## GetUserBetD - 取得下注資料
 ```
 MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
-  UserAccount(string)：玩家帳號 **限制 12 碼以內
-  UserNick(string)：玩家暱稱 **限制 12 碼以內
-  UserPassword(string)：玩家密碼 **限制 12 碼以內
+  UserId(string)：玩家ID
 傳入範例：
-  data={"UserAccount":"testUser02","UserNick":"userNick02","UserPassword":"test123"}
+  data={"UserId":"testUser02"}
 ```
 
 ```
@@ -33,31 +22,29 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object)：
-    AuthToken(string)：登入驗證令牌
-    UserId(int)：玩家ID
+    BetDate(string)：競猜時間
+    CreateDate(string)：下注時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"AuthToken":"552bffdb5c5ea4045d88e71c7b8f2b1d","UserId":47988}}
+  {"status":200,"msg":"成功","data":{"BetDate":"2022-12-14 12:00:00","CreateDate":"2022-12-14 10:00:00"}}
 失敗範例：
-  {"status":1005,"msg":"建立失敗","data":{}}
-  {"status":1101,"msg":"帳號重複","data":{}}
-  {"status":1105,"msg":"查無指定聊天室","data":{}}
-  {"status":1106,"msg":"聊天室人數已滿","data":{}}
+  {"status":1101,"msg":"無下注資料","data":{}}
 ```
 
-## UserLogin - 登入
+
+## UserPlaceBet - 下注
 ```
 MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
-  UserAccount(string)：玩家帳號
-  UserPassword(string)：玩家密碼
+  UserId(string)：玩家ID
+  BetDate(string)：競猜時間
 傳入範例：
-  data={"UserAccount":"testUser02","UserPassword":"test123"}
+  data={"UserId":"xxx","BetDate":"2022-12-14 10:00:00"}
 ```
 
 ```
@@ -65,15 +52,39 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object)：
-    AuthToken(string)：登入驗證令牌
-    UserId(int)：玩家ID
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"AuthToken":"79df2a0420d9add88bf3401360104682","UserId":47988}}
+  {"status":200,"msg":"成功","data":{}}
 失敗範例：
-  {"status":1102,"msg":"無此帳號","data":{}}
-  {"status":1103,"msg":"密碼錯誤","data":{}}
+  {"status":1102,"msg":"下注失敗","data":{}}
+```
+
+## UserRevisePlaceBet - 修改下注
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  UserId(string)：玩家ID
+  BetDate(string)：競猜時間
+傳入範例：
+  data={"UserId":"xxx","BetDate":"2022-12-14 10:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  {"status":1102,"msg":"下注失敗","data":{}}
 ```
