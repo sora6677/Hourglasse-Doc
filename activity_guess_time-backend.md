@@ -9,7 +9,6 @@
 |1002|資料庫異常|
 |1003|登入令牌驗證失效|
 |1004|無此權限|
-|1005|建立失敗|
 
 ## ManagerLogin - 管理員登入
 ```
@@ -68,4 +67,95 @@ MetHod：GET
   {"status":200,"msg":"成功","data":{}}
 失敗範例：
   {"status":1001,"msg":"傳入資料異常","data":{}}
+```
+
+## ManagerLogout - 管理員登出
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：GET
+傳入參數：
+傳入JSON：
+傳入範例：
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  {"status":1001,"msg":"傳入資料異常","data":{}}
+```
+
+## ActivityStart - 活動開始
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    ManagerId(string)：管理員ID
+    AuthToken(string)：管理員令牌
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+```
+
+## StartHourglass - 開始沙漏
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+```
+
+## ActivityEnd - 活動結束
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  EndDate(string)：結束時間
+傳入範例：
+  data={"EndDate":"2022-12-14 13:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
 ```
