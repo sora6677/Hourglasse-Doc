@@ -1,4 +1,4 @@
-# ActivityGussTime-backend.md 猜時間活動後台
+# ActivityGussTime-frontend 猜時間活動前台
 
 ## 錯誤代碼
 |回傳碼|說明|
