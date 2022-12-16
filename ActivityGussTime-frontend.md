@@ -8,7 +8,7 @@
 |1001|傳入資料異常|
 |1002|資料庫異常|
 
-## GetUserBetD - 取得下注資料
+## GetUserBetData - 取得下注資料
 ```
 MetHod：POST
 傳入參數：
@@ -37,7 +37,7 @@ MetHod：POST
 ```
 
 
-## UserPlaceBet - 下注
+## UserBet - 下注
 ```
 MetHod：POST
 傳入參數：
@@ -64,7 +64,7 @@ MetHod：POST
   {"status":1102,"msg":"下注失敗","data":{}}
 ```
 
-## UserRevisePlaceBet - 修改下注
+## UserReviseBet - 修改下注
 ```
 MetHod：POST
 傳入參數：
