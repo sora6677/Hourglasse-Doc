@@ -69,35 +69,6 @@ MetHod：GET
   {"status":1001,"msg":"傳入資料異常","data":{}}
 ```
 
-## ManagerLogout - 管理員登出
-```
-Header：
-  ManagerId(string)：管理員 (唯一碼)
-  ManagerToken(string)：身分驗證令牌
-```
-
-```
-MetHod：GET
-傳入參數：
-傳入JSON：
-傳入範例：
-```
-
-```
-回傳參數：
-  status(int)：代碼
-  msg(string)：訊息
-  data(object)：
-回傳方式：JSON
-```
-
-```
-成功範例：
-  {"status":200,"msg":"成功","data":{}}
-失敗範例：
-  {"status":1001,"msg":"傳入資料異常","data":{}}
-```
-
 ## ActivityStart - 活動開始
 ```
 MetHod：GET
