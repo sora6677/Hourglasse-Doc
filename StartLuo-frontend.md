@@ -5,8 +5,6 @@
 |---|---|
 |200|成功|
 |1000|異常錯誤|
-|1001|傳入資料異常|
-|1002|資料庫異常|
 
 ## UserUpdateLoginData - 玩家更新登入資料
 ```
@@ -14,6 +12,7 @@ MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
+  UserAccountId(string)：玩家的 accountID
   UserData(object)：API收到的整包玩家登入資料
 傳入範例：
   data={"UserData":"{API收到的整包玩家登入資料}"}
@@ -31,5 +30,5 @@ MetHod：POST
 成功範例：
   {"status":200,"msg":"成功","data":{}}
 失敗範例：
-  參考共用錯誤代碼
+  {"status":1101,"msg":"登入失敗","data":{}}
 ```
