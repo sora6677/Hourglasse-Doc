@@ -16,7 +16,7 @@ MetHod：POST
   UserData(object)：API收到的整包玩家登入資料
   UserBalanceData(object)：API收到的整包玩家票券資料
 傳入範例：
-  data={"UserData":{"accountID":"00000019","nickName":"Daisy00001"......},"UserBalanceData":[{"balance":"0","currencyType":"gold"},{"balance":"0","currencyType":"gem"}]}
+  data={"UserData":{"accountID":"00000019","nickName":"Daisy00001"......},"UserBalanceData":[{"balance":"0","currencyType":"gold"},{"balance":"0","currencyType":"gem"......}]}
 ```
 
 ```
