@@ -40,7 +40,7 @@ MetHod：POST
 ```
 Header：
   UserAccount(string)：玩家 (唯一碼)
-  CheckToken(string)：身分驗證令牌
+  AuthToken(string)：身分驗證令牌
 ```
 
 ```
@@ -67,7 +67,7 @@ MetHod：GET
 ```
 Header：
   UserAccount(string)：玩家 (唯一碼)
-  CheckToken(string)：身分驗證令牌
+  AuthToken(string)：身分驗證令牌
 ```
 
 ```
@@ -100,7 +100,7 @@ MetHod：POST
 ```
 Header：
   UserAccount(string)：玩家 (唯一碼)
-  CheckToken(string)：身分驗證令牌
+  AuthToken(string)：身分驗證令牌
 ```
 
 ```
