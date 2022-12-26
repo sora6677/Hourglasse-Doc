@@ -38,13 +38,80 @@ MetHod：POST
 
 ## GetUserBetList - 玩家競猜注單列表
 ```
+Header：
+  UserAccount(string)：玩家 (唯一碼)
+  CheckToken(string)：身分驗證令牌
+```
+
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  共用錯誤代碼或
+  {"status":1101,"msg":"登入失敗","data":{}}
+```
+
+## CreateUserBet - 建立玩家競猜注單
+```
+Header：
+  UserAccount(string)：玩家 (唯一碼)
+  CheckToken(string)：身分驗證令牌
+```
+
+```
 MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
-  AccountId(string)：玩家帳號
+  QuizDateTime(string)：競猜時間
 傳入範例：
-  data={"AccountId":"00000019"}
+  data={"QuizDateTime":"2022-12-30 13:02:01"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  共用錯誤代碼或
+  {"status":1101,"msg":"登入失敗","data":{}}
+```
+
+## UpdateUserBet - 修改玩家競猜注單
+```
+Header：
+  UserAccount(string)：玩家 (唯一碼)
+  CheckToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  BetId(string)：注單ID
+  QuizDateTime(string)：競猜時間
+傳入範例：
+  data={"QuizDateTime":"2022-12-30 13:02:01"}
 ```
 
 ```
