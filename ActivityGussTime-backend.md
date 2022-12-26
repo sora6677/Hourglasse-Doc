@@ -69,9 +69,53 @@ MetHod：GET
   {"status":1001,"msg":"傳入資料異常","data":{}}
 ```
 
+## ActivityList - 活動期數列表
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  EndDate(string)：結束時間
+傳入範例：
+  data={"EndDate":"2022-12-14 13:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    ManagerId(string)：管理員ID
+    AuthToken(string)：管理員令牌
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+```
+
 ## ActivityStart - 活動開始
 ```
-MetHod：GET
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  EndDate(string)：結束時間
+傳入範例：
+  data={"EndDate":"2022-12-14 13:00:00"}
 ```
 
 ```
@@ -91,7 +135,19 @@ MetHod：GET
 
 ## StartHourglass - 開始沙漏
 ```
-MetHod：GET
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  EndDate(string)：結束時間
+傳入範例：
+  data={"EndDate":"2022-12-14 13:00:00"}
 ```
 
 ```
@@ -107,13 +163,83 @@ MetHod：GET
   {"status":200,"msg":"成功","data":{}}
 ```
 
-## ActivityEnd - 活動結束
+## EndHourglass - 沙漏結束
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
 ```
 MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
   EndDate(string)：結束時間
+傳入範例：
+  data={"EndDate":"2022-12-14 13:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+```
+
+## StartHourglass - 停止下注
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  EndDate(string)：結束時間
+傳入範例：
+  data={"EndDate":"2022-12-14 13:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+```
+
+## WinList - 中獎名單
+```
+*** 猜中沙漏結束時間名單
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  StartDate(string)：起始時間
+  EndDate(string)：結束時間
+  GetLimit(int)：要取得筆數 ***最少取10筆
+  GetPage(int)：要取得頁數 ***從1開始
 傳入範例：
   data={"EndDate":"2022-12-14 13:00:00"}
 ```
