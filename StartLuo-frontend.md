@@ -24,7 +24,7 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object)：
-    LoginToken(string)：登入令牌
+    AuthToken(string)：登入令牌
 回傳方式：JSON
 ```
 
