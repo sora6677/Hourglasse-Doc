@@ -11,6 +11,14 @@
 |1004|無此權限|
 
 ## ManagerLogin - 管理員登入
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  ManagerAccount(string)：管理員帳號
+  ManagerPassword(string)：管理員密碼
+傳入範例：
+  data={"ManagerAccount":"test123","ManagerPassword":"test123"}
 ```
 MetHod：POST
 傳入參數：
@@ -99,7 +107,6 @@ MetHod：POST
 傳入範例：
   data={"pageType":101,"pageContent":{""}}
 ```
-[StartLuo 頁面內容文件](https://github.com/kd20220905/StartLuo_back/blob/main/back.md#startluo)
 
 ```
 回傳參數：
