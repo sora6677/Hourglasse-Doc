@@ -68,8 +68,8 @@ MetHod：GET
 失敗範例：
   {"status":1001,"msg":"傳入資料異常","data":{}}
 ```
-# 頁面說明
-## 各頁面類型對應
+## 頁面說明
+### 各頁面類型對應
 |類型代碼|說明|
 |---|---|
 |101|官網主頁|
@@ -82,7 +82,7 @@ MetHod：GET
 |108|品牌與名人|
 |109|服務條款|
 
-## 頁面內容參考
+### 頁面內容參考
 [StartLuo 頁面內容文件](https://github.com/kd20220905/StartLuo_back/blob/main/back.md#startluo)
 
 ## SetPageContent - 寫入前台頁面訊息
