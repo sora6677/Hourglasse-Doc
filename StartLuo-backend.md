@@ -90,6 +90,9 @@ MetHod：GET
 |108|品牌與名人|
 |109|服務條款|
 
+## 頁面內容參考
+[StartLuo 頁面內容文件](https://github.com/kd20220905/StartLuo_back/blob/main/back.md#startluo)
+
 ## SetPageContent - 寫入前台頁面訊息
 ```
 Header：
@@ -103,7 +106,7 @@ MetHod：POST
   data：JSON
 傳入JSON：
   pageType(int)：頁面類型代碼 **參考 各頁面類型對應
-  pageContent(string)：頁面內容 **參考 [StartLuo 頁面內容文件](https://github.com/kd20220905/StartLuo_back/blob/main/back.md#startluo)
+  pageContent(string)：頁面內容
 傳入範例：
   data={"pageType":101,"pageContent":{""}}
 ```
