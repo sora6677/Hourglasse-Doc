@@ -12,6 +12,7 @@
 
 ## GetPageIndex - 取首頁
 ```
+URL：api/startpage/GetPageIndex.php
 MetHod：GET
 ```
 
@@ -33,6 +34,7 @@ MetHod：GET
 
 ## GetPageRichStart - 發財開始囉
 ```
+URL：api/startpage/GetPageRichStart.php
 MetHod：GET
 ```
 
@@ -54,6 +56,7 @@ MetHod：GET
 
 ## GetPageMoneyStart - 賺錢開始鑼
 ```
+URL：api/startpage/GetPageMoneyStart.php
 MetHod：GET
 ```
 
@@ -75,6 +78,7 @@ MetHod：GET
 
 ## GetPageNewActivity - 最新活動
 ```
+URL：api/startpage/GetPageNewActivity.php
 MetHod：GET
 ```
 
@@ -96,6 +100,7 @@ MetHod：GET
 
 ## GetPageMusicActivity - 音樂祭活動
 ```
+URL：api/startpage/GetPageMusicActivity.php
 MetHod：GET
 ```
 
@@ -117,6 +122,7 @@ MetHod：GET
 
 ## GetPageStartLuoActivity - 沙漏活動
 ```
+URL：api/startpage/GetPageStartLuoActivity.php
 MetHod：GET
 ```
 
@@ -138,6 +144,7 @@ MetHod：GET
 
 ## GetPageFlyingCarActivity - 皂飛車活動
 ```
+URL：api/startpage/GetPageFlyingCarActivity.php
 MetHod：GET
 ```
 
@@ -159,6 +166,7 @@ MetHod：GET
 
 ## GetPageBrand - 品牌與名人
 ```
+URL：api/startpage/GetPageBrand.php
 MetHod：GET
 ```
 
@@ -180,6 +188,7 @@ MetHod：GET
 
 ## GetPageServiceInfo - 服務條款
 ```
+URL：api/startpage/GetPageServiceInfo.php
 MetHod：GET
 ```
 
