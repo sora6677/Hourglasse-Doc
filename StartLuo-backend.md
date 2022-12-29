@@ -146,7 +146,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{}}}
+  {"status":200,"msg":"成功","data":{"content":{......}}}
 失敗範例：
   {"status":1103,"msg":"查無此頁面","data":{}}
 ```
