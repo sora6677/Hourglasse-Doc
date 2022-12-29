@@ -8,7 +8,7 @@
 |1001|資料異常|
 |1002|連線異常|
 |1003|令牌失效|
-|1004|無此權限|
+
 
 ## ManagerLogin - 管理員登入
 ```
@@ -100,7 +100,7 @@ MetHod：POST
   pageType(int)：頁面類型代碼 **參考 各頁面類型對應
   pageContent(string)：頁面內容
 傳入範例：
-  data={"pageType":101,"pageContent":{""}}
+  data={"pageType":101,"pageContent":{......}}
 ```
 
 ```
@@ -115,7 +115,7 @@ MetHod：POST
 成功範例：
   {"status":200,"msg":"成功","data":{}}
 失敗範例：
-  {"status":1001,"msg":"傳入資料異常","data":{}}
+  {"status":1103,"msg":"查無此頁面","data":{}}
 ```
 
 ## GetPageContent - 取得頁面訊息
@@ -140,12 +140,13 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object)：
+    content(object)：頁面內容
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{}}
+  {"status":200,"msg":"成功","data":{"content":{}}}
 失敗範例：
-  {"status":1001,"msg":"傳入資料異常","data":{}}
+  {"status":1103,"msg":"查無此頁面","data":{}}
 ```
