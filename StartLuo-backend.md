@@ -85,7 +85,7 @@ MetHod：GET
 ### 頁面內容參考
 [StartLuo 頁面內容文件](https://github.com/kd20220905/StartLuo_back/blob/main/back.md#startluo)
 
-## SetPageContent - 寫入前台頁面訊息
+## SetPageContent - 寫入頁面訊息
 ```
 Header：
   ManagerId(string)：管理員 (唯一碼)
@@ -101,6 +101,38 @@ MetHod：POST
   pageContent(string)：頁面內容
 傳入範例：
   data={"pageType":101,"pageContent":{""}}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  {"status":1001,"msg":"傳入資料異常","data":{}}
+```
+
+## GetPageContent - 取得頁面訊息
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  pageType(int)：頁面類型代碼 **參考 各頁面類型對應
+傳入範例：
+  data={"pageType":101}
 ```
 
 ```
