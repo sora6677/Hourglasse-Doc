@@ -30,3 +30,171 @@ MetHod：GET
 失敗範例：
   共用錯誤代碼
 ```
+
+## GetPageRichStart - 發財開始囉
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageMoneyStart - 賺錢開始鑼
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageNewActivity - 最新活動
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageMusicActivity - 音樂祭活動
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageStartLuoActivity - 沙漏活動
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageFlyingCarActivity - 皂飛車活動
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageBrand - 品牌與名人
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
+
+## GetPageServiceInfo - 服務條款
+```
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    pageContent(string)：頁面內容
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"content":{......}}}
+失敗範例：
+  共用錯誤代碼
+```
