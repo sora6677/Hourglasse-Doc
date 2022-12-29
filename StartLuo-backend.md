@@ -12,6 +12,7 @@
 
 ## ManagerLogin - 管理員登入
 ```
+URL：api/manager/ManagerLogin.php
 MetHod：POST
 傳入參數：
   data：JSON
@@ -19,7 +20,7 @@ MetHod：POST
   ManagerAccount(string)：管理員帳號
   ManagerPassword(string)：管理員密碼
 傳入範例：
-  data={"ManagerAccount":"test123","ManagerPassword":"test123"}
+  data={"ManagerAccount":"xxx","ManagerPassword":"xxx"}
 ```
 
 ```
@@ -48,10 +49,8 @@ Header：
 ```
 
 ```
+URL：api/manager/ManagerLogout.php
 MetHod：GET
-傳入參數：
-傳入JSON：
-傳入範例：
 ```
 
 ```
@@ -93,6 +92,7 @@ Header：
 ```
 
 ```
+URL：api/startpage/SetPageContent.php
 MetHod：POST
 傳入參數：
   data：JSON
@@ -126,6 +126,7 @@ Header：
 ```
 
 ```
+URL：api/startpage/GetPageContent.php
 MetHod：POST
 傳入參數：
   data：JSON
