@@ -26,8 +26,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"imageUrl":"","events":[]}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -48,8 +49,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"imageUrl":"","detailImage":"","detailImage_phone":"","eventRule":"","titleImage":"","startTime":"","timeText":"","locationText":"","btnImage_1":"","btnImage_2":"","link_1":"","link_2":""}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -70,8 +72,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"imageUrl":"","detailImage":"","detailImage_phone":"","eventRule":"","titleImage":"","startTime":"","timeText":"","locationText":"","btnImage_1":"","btnImage_2":"","link_1":"","link_2":""}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -92,8 +95,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"imageUrl":"","titleImage":"","content":"","cards":[]}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -114,8 +118,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"imageUrl":"","titleImage":"","contentImage":"","startTime":"","timeText":"","locationText":"","btnImage":"","link":""}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -136,8 +141,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"eventRule":""}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -158,8 +164,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"timeText":"","locationText":"","eventRule":"","btnImage":"","link":""}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -180,8 +187,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"cards":[],"brands":[]}}}
 失敗範例：
   共用錯誤代碼
 ```
@@ -202,8 +210,9 @@ MetHod：GET
 ```
 
 ```
+**尚未從後台建立資料時預設回傳
 成功範例：
-  {"status":200,"msg":"成功","data":{"content":{......}}}
+  {"status":200,"msg":"成功","data":{"content":{"personalInfo":"","gameManage":"","usersContract":"","returnHandle":"","privacy":""}}}
 失敗範例：
   共用錯誤代碼
 ```
