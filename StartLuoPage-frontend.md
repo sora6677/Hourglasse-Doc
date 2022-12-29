@@ -1,4 +1,4 @@
-# StartLuoPage-frontend-Doc 開始囉頁面前抬
+# StartLuoPage-frontend-Doc 開始囉頁面前台
 
 ## 共用錯誤代碼
 |回傳碼|說明|
