@@ -335,7 +335,7 @@ Header：
 ```
 
 ```
-URL：api/startluo/BetStop.php
+URL：api/startluo/BetStart.php
 MetHod：POST
 傳入參數：
   data：JSON
