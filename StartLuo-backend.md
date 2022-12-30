@@ -151,3 +151,35 @@ MetHod：POST
 失敗範例：
   {"status":1103,"msg":"查無此頁面","data":{}}
 ```
+
+## StartLuoList - 沙漏期數列表
+```
+**目前僅列當期
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object array)：
+    PeriodId(int)：期數ID
+    StartDateTime(string)：活動開始時間
+    EndDateTime(string)：活動結束時間
+    BetEndDateTime(string)：下注結束時間
+    HourClassStartDateTime(string)：沙漏開始時間
+    HourClassEndDateTime(string)：沙漏結束時間
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+```
