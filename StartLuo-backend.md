@@ -326,3 +326,37 @@ MetHod：POST
 失敗範例：
   參考共用錯誤代碼
 ```
+
+## BetStart - 開始下注
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/BetStop.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  StartDateTime(string)：開始下注時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+傳入範例：
+  data={"PeriodId":1,"StartDateTime":"2022-12-30 16:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼
+```
