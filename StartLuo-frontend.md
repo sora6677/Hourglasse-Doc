@@ -5,10 +5,13 @@
 |---|---|
 |200|成功|
 |1000|異常錯誤|
-|1001|連線異常|
+|1001|資料異常|
+|1002|連線異常|
+|1003|令牌失效|
 
 ## UserUpdateLoginData - 玩家更新登入資料
 ```
+URL：api/UserUpdateLoginData.php
 MetHod：POST
 傳入參數：
   data：JSON
@@ -24,26 +27,27 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object)：
-    AuthToken(string)：登入令牌
+    AuthToken(string)：登入驗證令牌
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{}}
+  {"status":200,"msg":"成功","data":{"AuthToken":"2ed6ae6a01a532e10211a45d356508b8"}}
 失敗範例：
   共用錯誤代碼或
   {"status":1101,"msg":"登入失敗","data":{}}
 ```
 
-## GetUserBetList - 玩家競猜注單列表
+## UserUpdateToken - 玩家更新驗證令牌
 ```
 Header：
-  UserAccount(string)：玩家 (唯一碼)
-  AuthToken(string)：身分驗證令牌
+  UserAccount(string)：API收到的 accountID
+  AuthToken(string)：登入驗證令牌
 ```
 
 ```
+URL：api/UserUpdateToken.php
 MetHod：GET
 ```
 
@@ -52,80 +56,14 @@ MetHod：GET
   status(int)：代碼
   msg(string)：訊息
   data(object)：
+    AuthToken(string)：登入驗證令牌
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{}}
+  {"status":200,"msg":"成功","data":{"AuthToken":"b3fa93fbb77d931b9d758d593dc2ffc6"}}
 失敗範例：
   共用錯誤代碼或
-  {"status":1101,"msg":"登入失敗","data":{}}
-```
-
-## CreateUserBet - 建立玩家競猜注單
-```
-Header：
-  UserAccount(string)：玩家 (唯一碼)
-  AuthToken(string)：身分驗證令牌
-```
-
-```
-MetHod：POST
-傳入參數：
-  data：JSON
-傳入JSON：
-  QuizDateTime(string)：競猜時間
-傳入範例：
-  data={"QuizDateTime":"2022-12-30 13:02:01"}
-```
-
-```
-回傳參數：
-  status(int)：代碼
-  msg(string)：訊息
-  data(object)：
-回傳方式：JSON
-```
-
-```
-成功範例：
-  {"status":200,"msg":"成功","data":{}}
-失敗範例：
-  共用錯誤代碼或
-  {"status":1101,"msg":"登入失敗","data":{}}
-```
-
-## UpdateUserBet - 修改玩家競猜注單
-```
-Header：
-  UserAccount(string)：玩家 (唯一碼)
-  AuthToken(string)：身分驗證令牌
-```
-
-```
-MetHod：POST
-傳入參數：
-  data：JSON
-傳入JSON：
-  BetId(string)：注單ID
-  QuizDateTime(string)：競猜時間
-傳入範例：
-  data={"QuizDateTime":"2022-12-30 13:02:01"}
-```
-
-```
-回傳參數：
-  status(int)：代碼
-  msg(string)：訊息
-  data(object)：
-回傳方式：JSON
-```
-
-```
-成功範例：
-  {"status":200,"msg":"成功","data":{}}
-失敗範例：
-  共用錯誤代碼或
-  {"status":1101,"msg":"登入失敗","data":{}}
+  {"status":1102,"msg":"玩家不存在","data":{}}
 ```
