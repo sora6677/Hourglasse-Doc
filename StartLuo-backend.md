@@ -65,8 +65,9 @@ MetHod：GET
 成功範例：
   {"status":200,"msg":"成功","data":{}}
 失敗範例：
-  {"status":1001,"msg":"傳入資料異常","data":{}}
+  參考共用錯誤代碼
 ```
+
 ## 頁面說明
 ### 各頁面類型對應
 |類型代碼|說明|
@@ -181,5 +182,42 @@ MetHod：GET
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{}}
+  {"status":200,"msg":"成功","data":[{"PeriodId":1,"StartDateTime":"2022-12-18 00:00:00","EndDateTime":"2022-12-24 17:59:59","BetEndDateTime":"2022-12-24 12:00:00","HourClassStartDateTime":"2022-12-18 00:00:00","HourClassEndDateTime":"2022-12-24 17:59:59"}]}
+失敗範例：
+  參考共用錯誤代碼
 ```
+
+## StartLuoStart - 活動開始
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  StartDateTime(string)：開始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+傳入範例：
+  data={"PeriodId":1,"StartDateTime":"2022-12-30 13:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼
+```
+
