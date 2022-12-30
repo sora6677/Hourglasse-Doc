@@ -292,6 +292,7 @@ MetHod：POST
 
 ## BetStop - 停止下注
 ```
+***預設停止下注時間為沙漏開始時間後1小時
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
