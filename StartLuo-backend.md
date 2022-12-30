@@ -163,7 +163,7 @@ Header：
 ```
 
 ```
-URL：
+URL：api/startluo/StartLuoList.php
 MetHod：GET
 ```
 
@@ -196,7 +196,7 @@ Header：
 ```
 
 ```
-URL：
+URL：api/startluo/StartLuoStart.php
 MetHod：POST
 傳入參數：
   data：JSON
@@ -230,7 +230,7 @@ Header：
 ```
 
 ```
-URL：
+URL：api/startluo/HourglassStart.php
 MetHod：POST
 傳入參數：
   data：JSON
@@ -264,7 +264,7 @@ Header：
 ```
 
 ```
-URL：
+URL：api/startluo/HourglassEnd.php
 MetHod：POST
 傳入參數：
   data：JSON
@@ -299,7 +299,7 @@ Header：
 ```
 
 ```
-URL：
+URL：api/startluo/BetStop.php
 MetHod：POST
 傳入參數：
   data：JSON
