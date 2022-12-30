@@ -8,6 +8,7 @@
 |1001|資料異常|
 |1002|連線異常|
 |1003|令牌失效|
+|1004|更新失敗|
 
 
 ## ManagerLogin - 管理員登入
@@ -221,3 +222,104 @@ MetHod：POST
   參考共用錯誤代碼
 ```
 
+## HourglassStart - 開始沙漏
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  StartDateTime(string)：開始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+傳入範例：
+  data={"PeriodId":1,"StartDateTime":"2022-12-30 16:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼
+```
+
+## HourglassEnd - 沙漏結束
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  EndDateTime(string)：結束時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+傳入範例：
+  data={"PeriodId":1,"EndDateTime":"2022-12-30 16:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼
+```
+
+## BetStop - 停止下注
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  StopDateTime(string)：下注停止時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+傳入範例：
+  data={"PeriodId":1,"StopDateTime":"2022-12-30 16:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼
+```
