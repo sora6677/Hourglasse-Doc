@@ -74,7 +74,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"BetId":"167273308747519","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 16:04:47"}]}
+  {"status":200,"msg":"成功","data":[{"BetId":"167273308747519","PeriodId":1,"QuizDateTime":"2023-01-03 15:50:00","UpdateDateTime":"2023-01-03 16:47:33"},{"BetId":"167273747681641","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 17:17:57"},{"BetId":"167273766192191","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 17:21:02"}]}
 失敗範例：
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
@@ -135,7 +135,7 @@ MetHod：POST
   BetId(string)：注單ID
   QuizDateTime(string)：猜沙漏結束時間
 傳入範例：
-  data={"QuizDateTime":"2022-12-30 13:02:01"}
+  data={"BetId":167273308747519,"QuizDateTime":"2022-12-30 13:02:01"}
 ```
 
 ```
