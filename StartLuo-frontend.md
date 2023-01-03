@@ -66,14 +66,14 @@ MetHod：POST
   data(object Array)：
     BetId(string)：注單ID
     PeriodId(string)：期數
-    QuizTime(string)：猜沙漏結束時間
+    QuizDateTime(string)：猜沙漏結束時間
     UpdateTime(string)：注單更新時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"BetId":"167273308747519","PeriodId":1,"QuizTime":"2023-01-03 15:36:00","UpdateTime":"2023-01-03 16:04:47"}]}
+  {"status":200,"msg":"成功","data":[{"BetId":"167273308747519","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateTime":"2023-01-03 16:04:47"}]}
 失敗範例：
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
