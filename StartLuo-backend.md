@@ -360,3 +360,44 @@ MetHod：POST
 失敗範例：
   參考共用錯誤代碼
 ```
+
+## WinList - 中獎列表
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/WinList.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  RowCount(int)：取得筆數 範圍 10 ~ 100
+  GetPage(int)：取得頁數 範圍 >1
+  StartDateTime(string)：最後修改注單時間-起始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+  EndDateTime(string)：最後修改注單時間-結束時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+傳入範例：
+  data={"RowCount":10,"GetPage":1,"StartDateTime":"2023-01-03 15:00:00","EndDateTime":"2023-01-03 18:00:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object Array)：
+    MemberId(string)：玩家的 memberID
+    NickName(string)：玩家暱稱
+    PeriodId(int)：期數
+    QuizDateTime(string)：競猜時間
+    UpdateDateTime(string)：最後修改注單時間
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 17:17:57"}]}
+失敗範例：
+  參考共用錯誤代碼
+```
