@@ -118,7 +118,7 @@ MetHod：POST
   {"status":1109,"msg":"票券使用異常","data":{}}
 ```
 
-## UpdateUserBet - 修改玩家競猜注單
+## UpdateUserBet - 修改競猜注單
 ```
 Header：
   MemberId(string)：API收到的 ** memberID
