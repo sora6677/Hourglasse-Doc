@@ -39,3 +39,119 @@ MetHod：POST
   {"status":1101,"msg":"登入失敗","data":{}}
 ```
 ***
+
+## GetUserBetList - 取得競猜注單列表
+```
+Header：
+  MemberId(string)：API收到的 ** memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/UserUpdateLoginData.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  RowCount(int)：取得筆數 範圍 10 ~ 100
+  GetPage(int)：取得頁數 範圍 >1
+  PeriodId(int)：指定期數 傳入0表示自動取當期下注資料
+傳入範例：
+  data={"RowCount":10,"GetPage":1,"PeriodId":0}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object Array)：
+    BetId(string)：注單ID
+    PeriodId(string)：期數
+    QuizTime(string)：猜沙漏結束時間
+    UpdateTime(string)：注單更新時間
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":[{"BetId":"167273308747519","PeriodId":1,"QuizTime":"2023-01-03 15:36:00","UpdateTime":"2023-01-03 16:04:47"}]}
+失敗範例：
+  {"status":1102,"msg":"玩家不存在","data":{}}
+  {"status":1105,"msg":"期數異常","data":{}}
+```
+
+## CreateUserBet - 建立競猜注單
+```
+Header：
+  MemberId(string)：API收到的 ** memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/CreateUserBet.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  QuizDateTime(string)：猜沙漏結束時間
+傳入範例：
+  data={"QuizDateTime":"2023-01-03 15:36:00"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  {"status":1102,"msg":"玩家不存在","data":{}}
+  {"status":1103,"msg":"禁止下注","data":{}}
+  {"status":1105,"msg":"期數異常","data":{}}
+  {"status":1106,"msg":"無票券餘額","data":{}}
+  {"status":1107,"msg":"取票券餘額失敗","data":{}}
+  {"status":1108,"msg":"下注失敗","data":{}}
+  {"status":1109,"msg":"票券使用異常","data":{}}
+```
+
+## UpdateUserBet - 修改玩家競猜注單
+```
+Header：
+  MemberId(string)：API收到的 ** memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/UpdateUserBet.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  BetId(string)：注單ID
+  QuizDateTime(string)：猜沙漏結束時間
+傳入範例：
+  data={"QuizDateTime":"2022-12-30 13:02:01"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  共用錯誤代碼或
+  {"status":1102,"msg":"玩家不存在","data":{}}
+  {"status":1103,"msg":"禁止下注","data":{}}
+  {"status":1105,"msg":"期數異常","data":{}}
+```
