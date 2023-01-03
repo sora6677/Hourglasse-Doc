@@ -28,12 +28,13 @@ MetHod：POST
   msg(string)：訊息
   data(object)：
     AuthToken(string)：登入驗證令牌
+    NowPeriodId(string)：當前期數
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"AuthToken":"2ed6ae6a01a532e10211a45d356508b8"}}
+  {"status":200,"msg":"成功","data":{"AuthToken":"97969aa20c9eb30370fccc0a05f959aa","NowPeriodId":"token:hourglass:1"}}
 失敗範例：
   共用錯誤代碼或
   {"status":1101,"msg":"登入失敗","data":{}}
