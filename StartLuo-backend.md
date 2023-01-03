@@ -363,6 +363,7 @@ MetHod：POST
 
 ## WinList - 中獎列表
 ```
+**目前僅列當期
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
