@@ -39,31 +39,3 @@ MetHod：POST
   {"status":1101,"msg":"登入失敗","data":{}}
 ```
 
-## UserUpdateToken - 玩家更新驗證令牌
-```
-Header：
-  UserAccount(string)：API收到的 accountID
-  AuthToken(string)：登入驗證令牌
-```
-
-```
-URL：api/UserUpdateToken.php
-MetHod：GET
-```
-
-```
-回傳參數：
-  status(int)：代碼
-  msg(string)：訊息
-  data(object)：
-    AuthToken(string)：登入驗證令牌
-回傳方式：JSON
-```
-
-```
-成功範例：
-  {"status":200,"msg":"成功","data":{"AuthToken":"b3fa93fbb77d931b9d758d593dc2ffc6"}}
-失敗範例：
-  共用錯誤代碼或
-  {"status":1102,"msg":"玩家不存在","data":{}}
-```
