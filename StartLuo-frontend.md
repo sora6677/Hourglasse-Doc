@@ -55,9 +55,8 @@ MetHod：POST
 傳入JSON：
   RowCount(int)：取得筆數 範圍 10 ~ 100
   GetPage(int)：取得頁數 範圍 >1
-  PeriodId(int)：指定期數 傳入0表示自動取當期下注資料
 傳入範例：
-  data={"RowCount":10,"GetPage":1,"PeriodId":0}
+  data={"RowCount":10,"GetPage":1}
 ```
 
 ```
