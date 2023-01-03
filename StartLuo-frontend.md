@@ -44,7 +44,7 @@ MetHod：POST
 ## GetUserBetList - 取得競猜注單列表
 ```
 Header：
-  MemberId(string)：API收到的 ** memberID
+  MemberId(string)：API收到的 **memberID
   AuthToken(string)：身分驗證令牌
 ```
 
@@ -83,7 +83,7 @@ MetHod：POST
 ## CreateUserBet - 建立競猜注單
 ```
 Header：
-  MemberId(string)：API收到的 ** memberID
+  MemberId(string)：API收到的 **memberID
   AuthToken(string)：身分驗證令牌
 ```
 
@@ -122,7 +122,7 @@ MetHod：POST
 ## UpdateUserBet - 修改競猜注單
 ```
 Header：
-  MemberId(string)：API收到的 ** memberID
+  MemberId(string)：API收到的 **memberID
   AuthToken(string)：身分驗證令牌
 ```
 
