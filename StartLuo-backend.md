@@ -189,7 +189,7 @@ MetHod：GET
   參考共用錯誤代碼
 ```
 
-## StartLuoDefault - 指定期數預設時間
+## StartLuoDefault - 取得期數預設時間
 ```
 Header：
   ManagerId(string)：管理員 (唯一碼)
