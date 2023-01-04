@@ -212,7 +212,6 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object array)：
-    PeriodId(int)：期數ID
     DefaultStartDateTime(string)：預設-活動開始時間
     DefaultEndDateTime(string)：預設-活動結束時間
     DefaultBetEndDateTime(string)：預設-下注結束時間
