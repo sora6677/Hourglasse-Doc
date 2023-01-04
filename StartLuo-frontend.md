@@ -27,7 +27,7 @@ MetHod：POST
   status(int)：代碼
   msg(string)：訊息
   data(object)：
-    AuthToken(string)：登入驗證令牌
+    AuthToken(string)：身分驗證令牌
     NowPeriodId(string)：當前期數
 回傳方式：JSON
 ```
