@@ -190,43 +190,8 @@ MetHod：GET
   參考共用錯誤代碼
 ```
 
-## SwitchCtrlMethod - 切換控制方式
-```
-Header：
-  ManagerId(string)：管理員 (唯一碼)
-  ManagerToken(string)：身分驗證令牌
-```
-
-```
-URL：api/startluo/SwitchCtrlMethod.php
-MetHod：POST
-傳入參數：
-  data：JSON
-傳入JSON：
-  PeriodId(int)：期數ID
-  CtrlMethod(int)：控制方式 0:自動 1:後台手動
-傳入範例：
-  data={"PeriodId":1,"CtrlMethod":1}
-```
-
-```
-回傳參數：
-  status(int)：代碼
-  msg(string)：訊息
-  data(object Array)：
-回傳方式：JSON
-```
-
-```
-成功範例：
-  {"status":200,"msg":"成功","data":{}}
-失敗範例：
-  參考共用錯誤代碼
-```
-
 ## StartLuoStart - 活動開始
 ```
-*** 當 (CtrlMethod)控制方式 = 後台手動時呼叫才會成功
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
@@ -258,12 +223,10 @@ MetHod：POST
 失敗範例：
   參考共用錯誤代碼 或
   {"status":1104,"msg":"期數資料異常","data":{}}
-  {"status":1105,"msg":"期數控制方式非手動","data":{}}
 ```
 
 ## StartLuoEnd - 活動結束
 ```
-*** 當 (CtrlMethod)控制方式 = 後台手動時呼叫才會成功
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
@@ -295,12 +258,10 @@ MetHod：POST
 失敗範例：
   參考共用錯誤代碼 或
   {"status":1104,"msg":"期數資料異常","data":{}}
-  {"status":1105,"msg":"期數控制方式非手動","data":{}}
 ```
 
 ## BetStop - 停止下注
 ```
-*** 當 (CtrlMethod)控制方式 = 後台手動時呼叫才會成功
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
@@ -330,7 +291,8 @@ MetHod：POST
 成功範例：
   {"status":200,"msg":"成功","data":{}}
 失敗範例：
-  參考共用錯誤代碼
+  參考共用錯誤代碼 或
+  {"status":1104,"msg":"期數資料異常","data":{}}
 ```
 
 ## HourglassEnd - 沙漏結束
