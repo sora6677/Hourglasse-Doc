@@ -220,7 +220,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{}}
+  {"status":200,"msg":"成功","data":{"DefaultStartDateTime":"2023-01-04 00:00:00","DefaultEndDateTime":"2023-01-06 00:00:00","DefaultBetEndDateTime":"2023-01-05 00:00:00"}}
 失敗範例：
   參考共用錯誤代碼 或
   {"status":1104,"msg":"期數資料異常","data":{}}
