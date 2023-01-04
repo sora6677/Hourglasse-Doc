@@ -178,14 +178,14 @@ MetHod：GET
     StartDateTime(string)：活動開始時間
     EndDateTime(string)：活動結束時間
     BetEndDateTime(string)：下注結束時間
-    HourClassEndDateTime(string)：沙漏結束時間
+    HourClassEndTime(string)：沙漏結束時間
     CtrlMethod(int)：控制方式 0:自動 1:後台手動
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"PeriodId":1,"StartDateTime":"2022-12-18 00:00:00","EndDateTime":"2022-12-24 17:59:59","BetEndDateTime":"2022-12-24 12:00:00","HourClassStartDateTime":"2022-12-18 00:00:00","HourClassEndDateTime":"2022-12-24 17:59:59"}]}
+  {"status":200,"msg":"成功","data":[{"PeriodId":1,"StartDateTime":"2023-01-03 00:00:00","EndDateTime":"2023-01-06 00:00:00","BetEndDateTime":"2023-01-05 00:00:00","HourClassEndTime":"15:36:00","CtrlMethod":0}]}
 失敗範例：
   參考共用錯誤代碼
 ```
