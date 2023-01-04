@@ -67,14 +67,14 @@ MetHod：POST
   data(object Array)：
     BetId(string)：注單ID
     PeriodId(string)：期數
-    QuizDateTime(string)：猜沙漏結束時間
+    QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
     UpdateDateTime(string)：注單更新時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"BetId":"167273308747519","PeriodId":1,"QuizDateTime":"2023-01-03 15:50:00","UpdateDateTime":"2023-01-03 16:47:33"},{"BetId":"167273747681641","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 17:17:57"},{"BetId":"167273766192191","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 17:21:02"}]}
+  {"status":200,"msg":"成功","data":[{"BetId":"167273828338169","PeriodId":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-03 09:31:26"}]}
 失敗範例：
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
@@ -93,9 +93,9 @@ MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
-  QuizDateTime(string)：猜沙漏結束時間
+  QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
 傳入範例：
-  data={"QuizDateTime":"2023-01-03 15:36:00"}
+  data={"QuizTime":"15:36:00"}
 ```
 
 ```
@@ -133,9 +133,9 @@ MetHod：POST
   data：JSON
 傳入JSON：
   BetId(string)：注單ID
-  QuizDateTime(string)：猜沙漏結束時間
+  QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
 傳入範例：
-  data={"BetId":167273308747519,"QuizDateTime":"2022-12-30 13:02:01"}
+  data={"BetId":167273308747519,"QuizTime":"13:02:01"}
 ```
 
 ```
