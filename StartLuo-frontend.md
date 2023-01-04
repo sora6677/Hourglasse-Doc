@@ -49,7 +49,7 @@ Header：
 ```
 
 ```
-URL：api/startluo/UserUpdateLoginData.php
+URL：api/startluo/GetUserBetList.php
 MetHod：POST
 傳入參數：
   data：JSON
