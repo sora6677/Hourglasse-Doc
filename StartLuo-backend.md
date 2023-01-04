@@ -178,18 +178,53 @@ MetHod：GET
     StartDateTime(string)：活動開始時間
     EndDateTime(string)：活動結束時間
     BetEndDateTime(string)：下注結束時間
-    DefaultStartDateTime(string)：預設-活動開始時間
-    DefaultEndDateTime(string)：預設-活動結束時間
-    DefaultBetEndDateTime(string)：預設-下注結束時間
     HourClassEndTime(string)：沙漏結束時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"PeriodId":1,"StartDateTime":"2023-01-04 00:00:00","EndDateTime":"2023-01-06 00:00:00","BetEndDateTime":"2023-01-05 00:00:00","DefaultStartDateTime":"2023-01-04 00:00:00","DefaultEndDateTime":"2023-01-06 00:00:00","DefaultBetEndDateTime":"2023-01-05 00:00:00","HourClassEndTime":"00:00:00"}]}
+  {"status":200,"msg":"成功","data":[{"PeriodId":1,"StartDateTime":"2023-01-04 00:00:00","EndDateTime":"2023-01-06 00:00:00","BetEndDateTime":"2023-01-05 00:00:00","HourClassEndTime":"00:00:00"}]}
 失敗範例：
   參考共用錯誤代碼
+```
+
+## StartLuoDefault - 指定期數預設時間
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/StartLuoDefault.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+傳入範例：
+  data={"PeriodId":1}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object array)：
+    PeriodId(int)：期數ID
+    DefaultStartDateTime(string)：預設-活動開始時間
+    DefaultEndDateTime(string)：預設-活動結束時間
+    DefaultBetEndDateTime(string)：預設-下注結束時間
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼 或
+  {"status":1104,"msg":"期數資料異常","data":{}}
 ```
 
 ## StartLuoStart - 活動開始
