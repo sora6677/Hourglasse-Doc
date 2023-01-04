@@ -178,8 +178,8 @@ MetHod：GET
     StartDateTime(string)：活動開始時間
     EndDateTime(string)：活動結束時間
     BetEndDateTime(string)：下注結束時間
-    HourClassStartDateTime(string)：沙漏開始時間
     HourClassEndDateTime(string)：沙漏結束時間
+    CtrlMethod(int)：控制方式 0:自動 1:後台手動
 回傳方式：JSON
 ```
 
@@ -190,8 +190,43 @@ MetHod：GET
   參考共用錯誤代碼
 ```
 
+## SwitchCtrlMethod - 切換控制方式
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/SwitchCtrlMethod.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  CtrlMethod(int)：控制方式 0:自動 1:後台手動
+傳入範例：
+  data={"PeriodId":1,"CtrlMethod":1}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object Array)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼
+```
+
 ## StartLuoStart - 活動開始
 ```
+*** 當 (CtrlMethod)控制方式 = 後台手動時呼叫才會成功
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
@@ -224,57 +259,24 @@ MetHod：POST
   參考共用錯誤代碼
 ```
 
-## HourglassStart - 開始沙漏
+## StartLuoEnd - 活動結束
 ```
+*** 當 (CtrlMethod)控制方式 = 後台手動時呼叫才會成功
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
 ```
 
 ```
-URL：api/startluo/HourglassStart.php
+URL：api/startluo/StartLuoEnd.php
 MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
   PeriodId(int)：期數ID
-  StartDateTime(string)：開始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+  EndDateTime(string)：開始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
 傳入範例：
-  data={"PeriodId":1,"StartDateTime":"2022-12-30 16:00:00"}
-```
-
-```
-回傳參數：
-  status(int)：代碼
-  msg(string)：訊息
-  data(object)：
-回傳方式：JSON
-```
-
-```
-成功範例：
-  {"status":200,"msg":"成功","data":{}}
-失敗範例：
-  參考共用錯誤代碼
-```
-
-## HourglassEnd - 沙漏結束
-```
-Header：
-  ManagerId(string)：管理員 (唯一碼)
-  ManagerToken(string)：身分驗證令牌
-```
-
-```
-URL：api/startluo/HourglassEnd.php
-MetHod：POST
-傳入參數：
-  data：JSON
-傳入JSON：
-  PeriodId(int)：期數ID
-  EndDateTime(string)：結束時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
-傳入範例：
-  data={"PeriodId":1,"EndDateTime":"2022-12-30 16:00:00"}
+  data={"PeriodId":1,"EndDateTime":"2022-12-30 13:00:00"}
 ```
 
 ```
@@ -294,7 +296,7 @@ MetHod：POST
 
 ## BetStop - 停止下注
 ```
-***預設停止下注時間為沙漏開始時間後1小時
+*** 當 (CtrlMethod)控制方式 = 後台手動時呼叫才會成功
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
@@ -327,7 +329,7 @@ MetHod：POST
   參考共用錯誤代碼
 ```
 
-## BetStart - 開始下注
+## HourglassEnd - 沙漏結束
 ```
 Header：
   ManagerId(string)：管理員 (唯一碼)
@@ -335,15 +337,15 @@ Header：
 ```
 
 ```
-URL：api/startluo/BetStart.php
+URL：api/startluo/HourglassEnd.php
 MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
   PeriodId(int)：期數ID
-  StartDateTime(string)：開始下注時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+  EndTime(string)：結束時間 格式:HH:ii:ss (24 小時制)
 傳入範例：
-  data={"PeriodId":1,"StartDateTime":"2022-12-30 16:00:00"}
+  data={"PeriodId":1,"EndTime":"16:00:00"}
 ```
 
 ```
