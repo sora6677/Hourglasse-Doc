@@ -398,14 +398,14 @@ MetHod：POST
     MemberId(string)：玩家的 memberID
     NickName(string)：玩家暱稱
     PeriodId(int)：期數
-    QuizDateTime(string)：競猜時間
+    QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
     UpdateDateTime(string)：最後修改注單時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"QuizDateTime":"2023-01-03 15:36:00","UpdateDateTime":"2023-01-03 17:17:57"}]}
+  {"status":200,"msg":"成功","data":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-03 17:17:57"}]}
 失敗範例：
   參考共用錯誤代碼
 ```
