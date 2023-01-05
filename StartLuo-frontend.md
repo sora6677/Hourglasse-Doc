@@ -116,10 +116,11 @@ MetHod：POST
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1103,"msg":"禁止下注","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
-  {"status":1106,"msg":"無票券餘額","data":{}}
+  {"status":1106,"msg":"票券餘額不足","data":{}}
   {"status":1107,"msg":"取票券餘額失敗","data":{}}
   {"status":1108,"msg":"下注失敗","data":{}}
   {"status":1109,"msg":"票券使用異常","data":{}}
+  {"status":1110,"msg":"下注處理中","data":{}}
 ```
 
 ## CreateUserMultiBet - 建立多筆競猜注單
@@ -156,10 +157,11 @@ MetHod：POST
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1103,"msg":"禁止下注","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
-  {"status":1106,"msg":"無票券餘額","data":{}}
+  {"status":1106,"msg":"票券餘額不足","data":{}}
   {"status":1107,"msg":"取票券餘額失敗","data":{}}
   {"status":1108,"msg":"下注失敗","data":{}}
   {"status":1109,"msg":"票券使用異常","data":{}}
+  {"status":1110,"msg":"下注處理中","data":{}}
 ```
 
 ## UpdateUserBet - 修改競猜注單
@@ -197,6 +199,7 @@ MetHod：POST
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1103,"msg":"禁止下注","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
+  {"status":1111,"msg":"查無此注單編號","data":{}}
 ```
 
 ## UpdateUserMultiBet - 修改多筆競猜注單
@@ -235,4 +238,5 @@ MetHod：POST
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1103,"msg":"禁止下注","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
+  {"status":1111,"msg":"查無此注單編號","data":{}}
 ```
