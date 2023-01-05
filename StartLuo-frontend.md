@@ -64,17 +64,20 @@ MetHod：POST
 回傳參數：
   status(int)：代碼
   msg(string)：訊息
-  data(object Array)：
-    BetId(string)：注單ID
-    PeriodId(string)：期數
-    QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
-    UpdateDateTime(string)：注單更新時間
+  data(object)：
+    TotalPage(int)：總頁數
+    TotalCount(int)：總筆數
+    BetList(object array)：
+      BetNo(int)：注單編號
+      PeriodId(string)：期數
+      QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
+      UpdateDateTime(string)：注單更新時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"BetId":"167273828338169","PeriodId":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-03 09:31:26"}]}
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalCount":1,"BetList":[{"BetNo":1,"PeriodId":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-05 04:01:59"}]}}
 失敗範例：
   {"status":1102,"msg":"玩家不存在","data":{}}
   {"status":1105,"msg":"期數異常","data":{}}
@@ -119,6 +122,46 @@ MetHod：POST
   {"status":1109,"msg":"票券使用異常","data":{}}
 ```
 
+## CreateUserMultiBet - 建立多筆競猜注單
+```
+Header：
+  MemberId(string)：API收到的 **memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/CreateUserMultiBet.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  StartQuizTime(string)：猜沙漏結束時間-起始 時間格式: HH:ii:ss (24 小時制)
+  TotalSecond(int)：包牌總秒數
+傳入範例：
+  data={"StartQuizTime":"15:36:00","TotalSecond":10}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  {"status":1102,"msg":"玩家不存在","data":{}}
+  {"status":1103,"msg":"禁止下注","data":{}}
+  {"status":1105,"msg":"期數異常","data":{}}
+  {"status":1106,"msg":"無票券餘額","data":{}}
+  {"status":1107,"msg":"取票券餘額失敗","data":{}}
+  {"status":1108,"msg":"下注失敗","data":{}}
+  {"status":1109,"msg":"票券使用異常","data":{}}
+```
+
 ## UpdateUserBet - 修改競猜注單
 ```
 Header：
@@ -132,10 +175,48 @@ MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
-  BetId(string)：注單ID
+  BetNo(int)：注單編號
   QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
 傳入範例：
-  data={"BetId":167273308747519,"QuizTime":"13:02:01"}
+  data={"BetNo":1,"QuizTime":"13:02:01"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  共用錯誤代碼或
+  {"status":1102,"msg":"玩家不存在","data":{}}
+  {"status":1103,"msg":"禁止下注","data":{}}
+  {"status":1105,"msg":"期數異常","data":{}}
+```
+
+## UpdateUserMultiBet - 修改多筆競猜注單
+```
+Header：
+  MemberId(string)：API收到的 **memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/UpdateUserMultiBet.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  StartBetNo(int)：注單編號-起始
+  StartQuizTime(string)：猜沙漏結束時間-起始 時間格式: HH:ii:ss (24 小時制)
+  TotalSecond(int)：包牌總秒數
+傳入範例：
+  data={"StartBetNo":1,"StartQuizTime":"13:02:01","TotalSecond":20}
 ```
 
 ```
