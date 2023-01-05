@@ -386,6 +386,7 @@ MetHod：POST
 傳入JSON：
   RowCount(int)：取得筆數 範圍 10 ~ 100
   GetPage(int)：取得頁數 範圍 >1
+  PeriodId(int)：期數ID
   StartDateTime(string)：最後修改注單時間-起始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
   EndDateTime(string)：最後修改注單時間-結束時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
 傳入範例：
@@ -402,7 +403,7 @@ MetHod：POST
     WinList(object array)：
       MemberId(string)：玩家的 memberID
       NickName(string)：玩家暱稱
-      PeriodId(int)：期數
+      PeriodId(int)：期數Id
       BetNo(int)：玩家注單編號
       QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
       UpdateDateTime(string)：最後修改注單時間
