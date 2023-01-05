@@ -392,18 +392,22 @@ MetHod：POST
 回傳參數：
   status(int)：代碼
   msg(string)：訊息
-  data(object Array)：
-    MemberId(string)：玩家的 memberID
-    NickName(string)：玩家暱稱
-    PeriodId(int)：期數
-    QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
-    UpdateDateTime(string)：最後修改注單時間
+  data(object)：
+    TotalPage(int)：總頁數
+    TotalCount(int)：總筆數
+    WinList(object array)：
+      MemberId(string)：玩家的 memberID
+      NickName(string)：玩家暱稱
+      PeriodId(int)：期數
+      BetNo(int)：玩家注單編號
+      QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
+      UpdateDateTime(string)：最後修改注單時間
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-03 17:17:57"}]}
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"WinList":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"BetNo":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-05 12:20:32"}]}}
 失敗範例：
   參考共用錯誤代碼
 ```
