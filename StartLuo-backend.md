@@ -165,7 +165,14 @@ Header：
 
 ```
 URL：api/startluo/StartLuoList.php
-MetHod：GET
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  RowCount(int)：取得筆數 範圍 10 ~ 100
+  GetPage(int)：取得頁數 範圍 >1
+傳入範例：
+  data={"RowCount":10,"GetPage":1}
 ```
 
 ```
