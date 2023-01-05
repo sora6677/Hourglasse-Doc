@@ -158,7 +158,6 @@ MetHod：POST
 ***
 ## StartLuoList - 沙漏期數列表
 ```
-**目前僅列當期
 Header：
   ManagerId(string)：管理員 (唯一碼)
   ManagerToken(string)：身分驗證令牌
@@ -179,12 +178,13 @@ MetHod：GET
     EndDateTime(string)：活動結束時間
     BetEndDateTime(string)：下注結束時間
     HourClassEndTime(string)：沙漏結束時間
+    IsNow(int)：期數進行中
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":[{"PeriodId":1,"StartDateTime":"2023-01-04 00:00:00","EndDateTime":"2023-01-06 00:00:00","BetEndDateTime":"2023-01-05 00:00:00","HourClassEndTime":"00:00:00"}]}
+  {"status":200,"msg":"成功","data":[[{"PeriodId":1,"StartDateTime":"2023-01-04 16:00:00","EndDateTime":"2023-01-05 16:59:59","BetEndDateTime":null,"HourClassEndTime":"2023-01-05 16:55:00","IsNow":1},{"PeriodId":2,"StartDateTime":"2023-01-05 17:00:00","EndDateTime":"2023-01-06 09:00:00","BetEndDateTime":null,"HourClassEndTime":"2023-01-06 09:00:00","IsNow":0},{"PeriodId":3,"StartDateTime":"2023-01-06 12:00:00","EndDateTime":"2023-01-14 16:59:59","BetEndDateTime":null,"HourClassEndTime":"2023-01-14 15:00:00","IsNow":0},{"PeriodId":4,"StartDateTime":"2023-01-14 17:00:00","EndDateTime":"2023-01-21 15:00:00","BetEndDateTime":null,"HourClassEndTime":"2023-01-21 15:00:00","IsNow":0}]]}
 失敗範例：
   參考共用錯誤代碼
 ```
@@ -408,6 +408,51 @@ MetHod：POST
 ```
 成功範例：
   {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"WinList":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"BetNo":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-05 12:20:32"}]}}
+失敗範例：
+  參考共用錯誤代碼
+```
+
+## BetList - 注單列表
+```
+**目前僅列當期
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/BetList.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  RowCount(int)：取得筆數 範圍 10 ~ 100
+  GetPage(int)：取得頁數 範圍 >1
+  PeriodId(int)：期數
+傳入範例：
+  data={"RowCount":10,"GetPage":1,"PeriodId":1}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    TotalPage(int)：總頁數
+    TotalCount(int)：總筆數
+    BetList(object array)：
+      MemberId(string)：玩家的 memberID
+      NickName(string)：玩家暱稱
+      PeriodId(int)：期數
+      BetNo(int)：玩家注單編號
+      QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
+      UpdateDateTime(string)：最後修改注單時間
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"BetList":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"BetNo":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-05 12:20:32"}]}}
 失敗範例：
   參考共用錯誤代碼
 ```
