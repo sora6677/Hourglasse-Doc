@@ -29,12 +29,13 @@ MetHod：POST
   data(object)：
     AuthToken(string)：身分驗證令牌
     NowPeriodId(string)：當前期數
+    UserPhone(string)：玩家手機
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"AuthToken":"97969aa20c9eb30370fccc0a05f959aa","NowPeriodId":"token:hourglass:1"}}
+  {"status":200,"msg":"成功","data":{"AuthToken":"20901e076c658af37e7765d1902d2e63","NowPeriodId":"token:hourglass:0","UserPhone":"0988888888"}}
 失敗範例：
   共用錯誤代碼或
   {"status":1101,"msg":"登入失敗","data":{}}
@@ -97,8 +98,9 @@ MetHod：POST
   data：JSON
 傳入JSON：
   QuizTime(string)：猜沙漏結束時間 時間格式: HH:ii:ss (24 小時制)
+  UserPhone(string)：玩家手機
 傳入範例：
-  data={"QuizTime":"15:36:00"}
+  data={"QuizTime":"15:36:00","UserPhone":"0988888888"}
 ```
 
 ```
@@ -138,8 +140,9 @@ MetHod：POST
 傳入JSON：
   StartQuizTime(string)：猜沙漏結束時間-起始 時間格式: HH:ii:ss (24 小時制)
   TotalSecond(int)：包牌總秒數
+  UserPhone(string)：玩家手機
 傳入範例：
-  data={"StartQuizTime":"15:36:00","TotalSecond":10}
+  data={"StartQuizTime":"15:36:00","TotalSecond":2,"UserPhone":"0988888888"}
 ```
 
 ```
