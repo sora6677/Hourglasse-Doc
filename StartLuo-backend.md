@@ -444,6 +444,7 @@ MetHod：POST
     WinList(object array)：
       MemberId(string)：玩家的 memberID
       NickName(string)：玩家暱稱
+      UserPhone(string)：玩家手機
       PeriodId(int)：期數Id
       BetNo(int)：玩家注單編號
       QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
@@ -453,7 +454,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"WinList":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":1,"BetNo":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-05 12:20:32"}]}}
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"WinList":[{"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","UserPhone":"0988888888","PeriodId":1,"BetNo":1,"QuizTime":"15:36:00","UpdateDateTime":"2023-01-05 12:20:32"}]}}
 失敗範例：
   參考共用錯誤代碼
 ```
@@ -493,6 +494,7 @@ MetHod：POST
       BetId(int)：注單唯一碼
       MemberId(string)：玩家的 memberID
       NickName(string)：玩家暱稱
+      UserPhone(string)：玩家手機
       PeriodId(int)：期數
       BetNo(int)：玩家注單編號
       UseId(int)：票券交易ID
@@ -504,7 +506,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"BetList":[{"BetId":167281844214431,"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","PeriodId":2,"BetNo":12,"UseId":167291160774612,"QuizTime":"15:36:09","UpdateDateTime":"2023-01-05 17:40:08","UseStatus":1}]}}
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalRows":1,"BetList":[{"BetId":167281844214494,"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","UserPhone":"0988888888","PeriodId":0,"BetNo":1,"UseId":167299919212197,"QuizTime":"15:50:00","UpdateDateTime":"2023-01-06 18:00:02","UseStatus":1}]}}
 失敗範例：
   參考共用錯誤代碼
 ```
