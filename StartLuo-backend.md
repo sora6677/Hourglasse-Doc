@@ -342,6 +342,40 @@ MetHod：POST
   {"status":1104,"msg":"期數資料異常","data":{}}
 ```
 
+## HourglassStart - 沙漏開始
+```
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/HourglassStart.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+傳入範例：
+  data={"PeriodId":1}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  參考共用錯誤代碼 或
+  {"status":1104,"msg":"期數資料異常","data":{}}
+```
+
 ## HourglassEnd - 沙漏結束
 ```
 Header：
