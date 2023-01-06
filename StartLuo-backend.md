@@ -441,7 +441,7 @@ MetHod：POST
   RowCount(int)：取得筆數 範圍 10 ~ 100
   GetPage(int)：取得頁數 範圍 >1
   PeriodId(int)：期數ID
-  QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
+  QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制) **可傳入空值，空值表示抓全部符合查詢時間範圍的注單
   StartDateTime(string)：最後修改注單時間-起始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
   EndDateTime(string)：最後修改注單時間-結束時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
 傳入範例：
