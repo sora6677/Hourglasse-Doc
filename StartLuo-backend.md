@@ -464,7 +464,7 @@ MetHod：POST
       UseId(int)：票券交易ID
       QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
       UpdateDateTime(string)：最後修改注單時間
-      UseStatus(int)：票券狀態 是否已使用 0:處理中 1:成功 2:異常 3:餘額不足
+      UseStatus(int)：票券狀態 是否已使用 0:處理中 1:成功 2:異常 3:餘額不足 4:失敗
 回傳方式：JSON
 ```
 
