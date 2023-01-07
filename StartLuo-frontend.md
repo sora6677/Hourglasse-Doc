@@ -30,12 +30,13 @@ MetHod：POST
     AuthToken(string)：身分驗證令牌
     NowPeriodId(string)：當前期數
     UserPhone(string)：玩家手機
+    NowBalance(int)：玩家剩餘票券
 回傳方式：JSON
 ```
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"AuthToken":"20901e076c658af37e7765d1902d2e63","NowPeriodId":"token:hourglass:0","UserPhone":"0988888888"}}
+  {"status":200,"msg":"成功","data":{"AuthToken":"20901e076c658af37e7765d1902d2e63","NowPeriodId":"token:hourglass:0","UserPhone":"0988888888","NowBalance":1}}
 失敗範例：
   共用錯誤代碼或
   {"status":1101,"msg":"登入失敗","data":{}}
