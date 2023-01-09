@@ -41,6 +41,35 @@ MetHod：POST
   共用錯誤代碼或
   {"status":1101,"msg":"登入失敗","data":{}}
 ```
+
+## UserUpdatePhone - 玩家更新手機
+```
+URL：api/UserUpdatePhone.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  UserUpdatePhone(string)：玩家手機
+傳入範例：
+  data={"UserPhone":"0912345619"}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{}}
+失敗範例：
+  共用錯誤代碼或
+  {"status":1112,"msg":"手機格式不符","data":{}}
+```
+
 ***
 
 ## GetPeriodList - 取得期數列表
