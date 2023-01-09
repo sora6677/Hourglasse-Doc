@@ -64,7 +64,7 @@ MetHod：GET
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"UserPhone":"0988547582"}}
+  {"status":200,"msg":"成功","data":{"UserPhone":"0912345619"}}
 失敗範例：
   共用錯誤代碼
 ```
