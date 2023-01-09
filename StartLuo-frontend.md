@@ -42,7 +42,40 @@ MetHod：POST
   {"status":1101,"msg":"登入失敗","data":{}}
 ```
 
+## GetUserData - 取得玩家資料
+```
+Header：
+  MemberId(string)：API收到的 **memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/GetUserData.php
+MetHod：GET
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"UserPhone":"0988547582"}}
+失敗範例：
+  共用錯誤代碼
+```
+
 ## UserUpdatePhone - 玩家更新手機
+```
+Header：
+  MemberId(string)：API收到的 **memberID
+  AuthToken(string)：身分驗證令牌
+```
+
 ```
 URL：api/UserUpdatePhone.php
 MetHod：POST
