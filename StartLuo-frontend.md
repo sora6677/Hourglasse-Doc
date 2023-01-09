@@ -43,6 +43,48 @@ MetHod：POST
 ```
 ***
 
+## GetPeriodList - 取得期數列表
+```
+Header：
+  MemberId(string)：API收到的 **memberID
+  AuthToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/GetPeriodList.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  RowCount(int)：取得筆數 範圍 10 ~ 100
+  GetPage(int)：取得頁數 範圍 >1
+傳入範例：
+  data={"RowCount":10,"GetPage":1}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    TotalPage(int)：總頁數
+    TotalCount(int)：總筆數
+    PeriodList(object array)：
+      PeriodId(int)：期數ID
+      StartDateTime(string)：活動開始時間
+      EndDateTime(string)：活動結束時間
+      IsNow(int)：期數是否進行中 0:不在活動時間 1:進行中
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalCount":1,"PeriodList":[{"PeriodId":1,"StartDateTime":"2023-01-06 12:00:00","EndDateTime":"2023-01-14 16:59:59","IsNow":1}]}}
+失敗範例：
+  {"status":1102,"msg":"玩家不存在","data":{}}
+  {"status":1105,"msg":"期數異常","data":{}}
+```
+
 ## GetUserBetList - 取得競猜注單列表
 ```
 Header：
