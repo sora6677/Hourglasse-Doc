@@ -187,6 +187,7 @@ MetHod：POST
       StartDateTime(string)：活動開始時間
       EndDateTime(string)：活動結束時間
       BetEndDateTime(string)：下注結束時間
+      HourClassStartTime(string)：沙漏開始時間
       HourClassEndTime(string)：沙漏結束時間
       IsNow(int)：期數進行中
       BetCount(int)：注單總量
@@ -195,7 +196,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalCount":4,"PeriodList":[{"PeriodId":1,"StartDateTime":"2023-01-04 16:00:00","EndDateTime":"2023-01-05 16:59:59","BetEndDateTime":"2023-01-05 16:55:00","HourClassEndTime":"00:00:00","IsNow":0,"BetCount":25},{"PeriodId":2,"StartDateTime":"2023-01-05 17:00:00","EndDateTime":"2023-01-06 09:00:00","BetEndDateTime":"2023-01-06 09:00:00","HourClassEndTime":"00:00:00","IsNow":1,"BetCount":12},{"PeriodId":3,"StartDateTime":"2023-01-06 12:00:00","EndDateTime":"2023-01-14 16:59:59","BetEndDateTime":"2023-01-14 15:00:00","HourClassEndTime":"00:00:00","IsNow":0,"BetCount":0},{"PeriodId":4,"StartDateTime":"2023-01-14 17:00:00","EndDateTime":"2023-01-21 15:00:00","BetEndDateTime":"2023-01-21 15:00:00","HourClassEndTime":"00:00:00","IsNow":0,"BetCount":0}]}}
+  {"status":200,"msg":"成功","data":{"TotalPage":1,"TotalCount":2,"PeriodList":[{"PeriodId":2,"StartDateTime":"2023-01-14 17:00:00","EndDateTime":"2023-01-21 16:59:59","BetEndDateTime":"2023-01-21 15:00:00","HourClassStartTime":"0000-00-00 00:00:00","HourClassEndTime":"00:00:00","IsNow":0,"BetCount":0},{"PeriodId":1,"StartDateTime":"2023-01-06 12:00:00","EndDateTime":"2023-01-14 16:59:59","BetEndDateTime":"2023-01-14 15:00:00","HourClassStartTime":"2023-01-04 00:00:00","HourClassEndTime":"00:00:00","IsNow":1,"BetCount":1}]}}
 失敗範例：
   參考共用錯誤代碼
 ```
