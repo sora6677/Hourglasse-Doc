@@ -474,7 +474,7 @@ MetHod：POST
 傳入參數：
   data：JSON
 傳入JSON：
-  RowCount(int)：取得筆數 範圍 10 ~ 100
+  RowCount(int)：取得筆數 範圍 10 ~ 1000
   GetPage(int)：取得頁數 範圍 >1
   PeriodId(int)：期數ID
   QuizStartTime(string)：競猜時間-起始 格式:HH:ii:ss (24 小時制) **當 IsAll = 0 時為必填
