@@ -36,7 +36,7 @@ MetHod：POST
 
 ```
 成功範例：
-  {"status":200,"msg":"成功","data":{"ManagerId":"1","AuthToken":"1bab341c06ca0d432e3d37adc892a4a1"}}
+  {"status":200,"msg":"成功","data":{"ManagerId":"1","ManagerToken":"1bab341c06ca0d432e3d37adc892a4a1"}}
 失敗範例：
   {"status":1101,"msg":"登入失敗","data":{}}
   {"status":1102,"msg":"密碼錯誤","data":{}}
