@@ -514,3 +514,53 @@ MetHod：POST
   參考共用錯誤代碼
 ```
 
+## BetListAll - 注單列表不分頁
+```
+**目前僅列當期
+Header：
+  ManagerId(string)：管理員 (唯一碼)
+  ManagerToken(string)：身分驗證令牌
+```
+
+```
+URL：api/startluo/BetListAll.php
+MetHod：POST
+傳入參數：
+  data：JSON
+傳入JSON：
+  PeriodId(int)：期數ID
+  QuizStartTime(string)：競猜時間-起始 格式:HH:ii:ss (24 小時制) **當 IsAll = 0 時為必填
+  QuizEndTime(string)：競猜時間-結束 格式:HH:ii:ss (24 小時制)  **當 IsAll = 0 時為必填
+  StartDateTime(string)：最後修改注單時間-起始時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+  EndDateTime(string)：最後修改注單時間-結束時間 格式:yyyy-mm-dd HH:ii:ss (24 小時制)
+  IsAll(int)：是否查 StartDateTime ~ EndDateTime 內的全部注單 0:依競猜時間查詢 1:查全部
+傳入範例：
+  data={"PeriodId":1,"QuizStartTime":"01:00:00","QuizEndTime":"02:00:00","StartDateTime":"2023-01-07 00:00:00","EndDateTime":"2023-01-08 00:00:00","IsAll":0}
+```
+
+```
+回傳參數：
+  status(int)：代碼
+  msg(string)：訊息
+  data(object)：
+    BetList(object array)：
+      BetId(int)：注單唯一碼
+      MemberId(string)：玩家的 memberID
+      NickName(string)：玩家暱稱
+      UserPhone(string)：玩家手機
+      PeriodId(int)：期數
+      BetNo(int)：玩家注單編號
+      UseId(int)：票券交易ID
+      QuizTime(string)：競猜時間 格式:HH:ii:ss (24 小時制)
+      UpdateDateTime(string)：最後修改注單時間
+      UseStatus(int)：票券狀態 是否已使用 0:處理中 1:成功 2:異常 3:餘額不足 4:失敗
+回傳方式：JSON
+```
+
+```
+成功範例：
+  {"status":200,"msg":"成功","data":{"BetList":[{"BetId":167281844214494,"MemberId":"LFtjoUck3CPDEWtkxfI77Csudfg2","NickName":"Daisy00001","UserPhone":"0988888888","PeriodId":0,"BetNo":1,"UseId":167299919212197,"QuizTime":"15:50:00","UpdateDateTime":"2023-01-06 18:00:02","UseStatus":1}]}}
+失敗範例：
+  參考共用錯誤代碼
+```
+
